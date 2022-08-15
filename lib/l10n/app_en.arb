@@ -1,0 +1,19 @@
+{
+   "todolist": "To Do List",
+   "done": "Done",
+   "add_new_task": "Add New Task",
+   "language": "Language",
+   "select_time": "Select Time",
+   "edit_task": "Edit Task",
+   "this_is_title": "This is title",
+   "task_details": "Task Details",
+   "save_changes": "Save Changes",
+   "mode": "Mode",
+   "delete": "Delete",
+   "english": "English",
+   "arabic": "Arabic",
+   "dark_mode": "Dark Mode",
+   "light_mode": "Light Mode",
+   "settings": "Settings",
+   "tasks": "Tasks"
+}

@@ -1,0 +1,19 @@
+{
+   "todolist": "جدول المهام",
+   "done": "تم",
+   "add_new_task": "اضافة مهمه جديده",
+   "language": "اللغه",
+   "select_time": "اختار الوقت",
+   "edit_task": "تعدبل المهمه",
+   "this_is_title": "العنوان",
+   "task_details": "تفاصيل المهمه",
+   "save_changes": "احفظ التغيرات",
+   "mode": "الوضع",
+   "delete": "حذف",
+   "english": "انجليزي",
+   "arabic": "عربي",
+   "dark_mode": "الوضع المظلم",
+   "light_mode": "وضع الضوء",
+   "settings": "الاعدادات",
+   "tasks": "المهام"
+}
