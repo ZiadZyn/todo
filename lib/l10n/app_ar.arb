@@ -15,5 +15,7 @@
    "dark_mode": "الوضع المظلم",
    "light_mode": "وضع الضوء",
    "settings": "الاعدادات",
-   "tasks": "المهام"
+   "tasks": "المهام",
+   "enter_your_task": "اضف مهمة",
+   "enter_your_description": "اضف الوصف"
 }

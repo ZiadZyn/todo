@@ -15,5 +15,7 @@
    "dark_mode": "Dark Mode",
    "light_mode": "Light Mode",
    "settings": "Settings",
-   "tasks": "Tasks"
+   "tasks": "Tasks",
+   "enter_your_task": "Enter your Task",
+   "enter_your_description": "Enter your Description"
 }

@@ -1,10 +1,12 @@
+import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/provider.dart';
-import 'package:todo/settings.dart';
-import 'package:todo/task_tap.dart';
+import 'package:todo/provider/provider.dart';
+import 'package:todo/settings/settings.dart';
+import 'package:todo/tasks_tap/task_tap.dart';
 
+import 'tasks_tap/add_task_bottom_sheet.dart';
 import 'my_theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,12 +27,16 @@ int currentIndex =0;
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.todolist,style: Theme.of(context).textTheme.headline4,),
       ),
-      bottomNavigationBar: Theme(
+      bottomNavigationBar: BottomAppBar(
+        notchMargin: 10,
+        shape: CircularNotchedRectangle(),
+        clipBehavior: Clip.antiAlias,
+        child: Theme(
     data: Theme.of(context).copyWith(
     canvasColor: MyTheme.lightBlue
     ),
-        child: Theme(
-        data: Theme.of(context).copyWith(canvasColor: Theme.of(context).primaryColor),
+          child: Theme(
+          data: Theme.of(context).copyWith(canvasColor: Theme.of(context).primaryColor),
     child: BottomNavigationBar(
     currentIndex: currentIndex,
     onTap: (index){
@@ -40,20 +46,40 @@ int currentIndex =0;
     });
     },
     items: [
-      BottomNavigationBarItem(
-        label: AppLocalizations.of(context)!.tasks,
-        icon: Icon(Icons.list),
-      ),
-      BottomNavigationBarItem(
-        label: AppLocalizations.of(context)!.settings,
-        icon: Icon(Icons.settings),
-      ),
+        BottomNavigationBarItem(
+          label: AppLocalizations.of(context)!.tasks,
+          icon: Icon(Icons.list),
+        ),
+        BottomNavigationBarItem(
+          label: AppLocalizations.of(context)!.settings,
+          icon: Icon(Icons.settings),
+        ),
     ],
-      ),
+        ),
     )
+        ),
       ),
-        body: tabs[currentIndex],
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          showAddTaskBottomSheet(provider);
+        },
+        child: Icon(Icons.add),
+
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      body: tabs[currentIndex],
     );
   }
   var tabs=[TaskTap(),Sittengs()];
+
+  void showAddTaskBottomSheet(provider) {
+     showModalBottomSheet(
+         shape: RoundedRectangleBorder(
+           borderRadius: BorderRadius.circular(20.0),
+         ),
+        context: context,
+        builder: (context) {
+         return AddTaskBottomSheet();
+        });
+  }
 }

@@ -8,13 +8,14 @@ class MyTheme{
   static Color white=Color.fromRGBO(255, 255, 255, 1.0);
   static Color black=Color.fromRGBO(56, 56, 56, 1.0);
   static Color gray=Color.fromRGBO(200, 201, 203, 1.0);
-  static Color primaryGray=Color.fromRGBO(200, 201, 203, 1.0);
+  static Color primaryGray=Color.fromRGBO(223, 236, 219, 1.0);
+
   static final ThemeData lightMode = ThemeData(
     primaryColor: white,
     scaffoldBackgroundColor: primaryGray,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: lightBlue,
-      unselectedItemColor: primaryGray,
+      unselectedItemColor: gray,
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: lightBlue,
@@ -50,7 +51,7 @@ class MyTheme{
     scaffoldBackgroundColor: black,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: lightBlue,
-      unselectedItemColor: primaryGray,
+      unselectedItemColor: gray,
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: lightBlue,
